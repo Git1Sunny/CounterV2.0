@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7154FF4219EE2B000351635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7154FF3219EE2B000351635 /* Assets.xcassets */; };
 		F7F9F24B219D0DB700C15695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9F24A219D0DB700C15695 /* AppDelegate.swift */; };
 		F7F9F24D219D0DB700C15695 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9F24C219D0DB700C15695 /* ViewController.swift */; };
 		F7F9F250219D0DB700C15695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F9F24E219D0DB700C15695 /* Main.storyboard */; };
 		F7F9F253219D0DB700C15695 /* CounterV2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7F9F251219D0DB700C15695 /* CounterV2_0.xcdatamodeld */; };
-		F7F9F255219D0DB800C15695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F9F254219D0DB800C15695 /* Assets.xcassets */; };
 		F7F9F258219D0DB800C15695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F9F256219D0DB800C15695 /* LaunchScreen.storyboard */; };
 		F7F9F263219D0DB800C15695 /* CounterV2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9F262219D0DB800C15695 /* CounterV2_0Tests.swift */; };
 		F7F9F26E219D0DB800C15695 /* CounterV2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9F26D219D0DB800C15695 /* CounterV2_0UITests.swift */; };
@@ -35,12 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7154FF3219EE2B000351635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Other/counter/counter v1.0/Assets.xcassets"; sourceTree = "<group>"; };
 		F7F9F247219D0DB700C15695 /* CounterV2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterV2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F9F24A219D0DB700C15695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7F9F24C219D0DB700C15695 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7F9F24F219D0DB700C15695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7F9F252219D0DB700C15695 /* CounterV2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterV2_0.xcdatamodel; sourceTree = "<group>"; };
-		F7F9F254219D0DB800C15695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7F9F257219D0DB800C15695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7F9F259219D0DB800C15695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7F9F25E219D0DB800C15695 /* CounterV2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterV2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,8 +102,8 @@
 				F7F9F24A219D0DB700C15695 /* AppDelegate.swift */,
 				F7F9F24C219D0DB700C15695 /* ViewController.swift */,
 				F7F9F24E219D0DB700C15695 /* Main.storyboard */,
-				F7F9F254219D0DB800C15695 /* Assets.xcassets */,
 				F7F9F256219D0DB800C15695 /* LaunchScreen.storyboard */,
+				F7154FF3219EE2B000351635 /* Assets.xcassets */,
 				F7F9F259219D0DB800C15695 /* Info.plist */,
 				F7F9F251219D0DB700C15695 /* CounterV2_0.xcdatamodeld */,
 			);
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F9F258219D0DB800C15695 /* LaunchScreen.storyboard in Resources */,
-				F7F9F255219D0DB800C15695 /* Assets.xcassets in Resources */,
+				F7154FF4219EE2B000351635 /* Assets.xcassets in Resources */,
 				F7F9F250219D0DB700C15695 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
