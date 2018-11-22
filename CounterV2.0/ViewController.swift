@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     class NumberData{
-        var Num = [Double](repeating: 0, count: 999)
-        var Top : Int = 0
+        var Num = [Double](repeating: 0, count: 5)
+        var Top : Int = -1
         func PushNum(inNum:Double)
         {
             self.Top += 1
@@ -31,11 +31,11 @@ class ViewController: UIViewController {
         }
     }
     class CountData{
-        var Cou = [String](repeating: "=", count: 999)
+        var Cou = [String](repeating: "=", count: 5)
         var Top : Int = 0
         func reCountData()
         {
-            self.Top = -1
+            self.Top = 0
         }
         func PopCou() -> String
         {
@@ -118,14 +118,7 @@ class ViewController: UIViewController {
                 Text = "<"
                 break
             case ")":
-                switch Text1
-                {
-                case "(" :
-                    Text = "="
-                    break
-                default:
                     Text = ">"
-                }
                 break
             case "=":
                 switch Text1
@@ -189,10 +182,19 @@ class ViewController: UIViewController {
                 sign = CouData.PopCou()
                 Num2 = NumData.PopNum()
                 Num1 = NumData.PopNum()
+                if(CouData.Cou[CouData.Top] == "(")
+                {
+                    CouData.Top -= 1
+                }
                 result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
                 NumData.PushNum(inNum: result)
+                if(String(MainScreen.text!.suffix(1)) != ")" )
+                {
+                    CouData.PushCou(inCou: "\(MainScreen.text!.suffix(1))")
+                }
                 break
             default:
+                print("Number Button Error")
                 break
             }
         }
@@ -205,10 +207,6 @@ class ViewController: UIViewController {
     }
     @IBAction func CountButton(_ sender: UIButton)
     {
-        if(Numbertext != "")
-        {
-            NumData.PushNum(inNum: Double(Numbertext)!)
-        }
         if(MainScreen.text!.count <= 14*3)
         {
             if(JudgeCount( Text: (String(MainScreen.text!.suffix(1)))))
@@ -231,9 +229,12 @@ class ViewController: UIViewController {
             {
                 MainScreentext.remove(at: MainScreentext.index(before: MainScreentext.endIndex))
             }
+
             if(JudgeCount( Text: (String(MainScreen.text!.suffix(1)))))
             {
+                CouData.PushCou(inCou: String(MainScreen.text!.suffix(1)))
                 MainScreentext += "("
+                KuohaoNumber += 1
             }
             else
             {
@@ -241,17 +242,21 @@ class ViewController: UIViewController {
                 switch String(MainScreen.text!.suffix(1)) {
                     case "(":
                         MainScreentext += "("
+                        CouData.PushCou(inCou: String(MainScreen.text!.suffix(1)))
                         KuohaoNumber += 1
                         break;
                     case ")":
                         if(KuohaoNumber == 0)
                         {
                             MainScreentext += "x("
+                            CouData.PushCou(inCou: "x")
+                            CouData.PushCou(inCou: String(MainScreen.text!.suffix(1)))
                             KuohaoNumber += 1
                         }
                         else
                         {
                             MainScreentext += ")"
+                            CouData.PushCou(inCou: String(MainScreen.text!.suffix(1)))
                             KuohaoNumber -= 1
                         }
                         break
@@ -259,11 +264,16 @@ class ViewController: UIViewController {
                         if(KuohaoNumber == 0)
                         {
                             MainScreentext += "x("
+                            CouData.PushCou(inCou: "x")
+                            NumData.PushNum(inNum:Double(Numbertext)!)
+                            Numbertext = ""
                             KuohaoNumber += 1
                         }
                         else
                         {
                             MainScreentext += ")"
+                            NumData.PushNum(inNum:Double(Numbertext)!)
+                            Numbertext = ""
                             KuohaoNumber -= 1
                     }
                 }
@@ -280,10 +290,24 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func Change(_ sender: Any) {
-        print(CampCount(Text1: CouData.Cou[CouData.Top], Text2:String(MainScreen.text!.suffix(1))))
-        print(CouData.Top)
+        for item in CouData.Cou {
+            print(item)
+            if(item == CouData.Cou[CouData.Top])
+            {
+            print("A")
+            }
+        }
+        print("_______________________")
+        for item in NumData.Num {
+            print(item)
+            if(item == NumData.Num[NumData.Top])
+            {
+                print("A")
+            }
+        }
     }
     @IBAction func DeleteNumber(_ sender: Any) {
+        print(CampCount(Text1: CouData.Cou[CouData.Top], Text2:String(MainScreen.text!.suffix(1))))
     }
     @IBAction func ACButton(_ sender: Any) {
         KuohaoNumber = 0
@@ -298,28 +322,27 @@ class ViewController: UIViewController {
     
     @IBAction func FinalCount(_ sender: Any) {
         var sign : String = ""
-        var num1 : Double = 0
-        var num2 : Double = 0
+        var Num1 : Double = 0
+        var Num2 : Double = 0
         var result : Double = 0
         if(Numbertext != "")
         {
             NumData.PushNum(inNum: Double(Numbertext)!)
         }
-        while(!NumData.Num.isEmpty)
+        while(NumData.Top>0)
         {
             sign = CouData.PopCou()
-            num2 = NumData.PopNum()
-            num1 = NumData.PopNum()
-            result = MainCount(Num1: num1, Cou: sign, Num2: num2)
+            Num2 = NumData.PopNum()
+            Num1 = NumData.PopNum()
+            result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
             NumData.PushNum(inNum: result)
         }
-        ScendScreen.text = String(result)
+        ScendScreen.text = String(NumData.Num[0])
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
+// 实现括号问题 ） 入站出站问题？？？？
 
