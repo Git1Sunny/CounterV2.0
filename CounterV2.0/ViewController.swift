@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     class NumberData{
-        var Num = [Double](repeating: 0, count: 5)
+        var Num = [Double](repeating: 0, count: 29)
         var Top : Int = -1
         func PushNum(inNum:Double)
         {
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         }
     }
     class CountData{
-        var Cou = [String](repeating: "=", count: 5)
+        var Cou = [String](repeating: "=", count: 29)
         var Top : Int = 0
         func reCountData()
         {
@@ -62,6 +62,31 @@ class ViewController: UIViewController {
             return true
         }
         return false
+    }
+    func CutScreen(Text:String)
+    {
+        var Number : String = ""
+        for ch in Text.characters
+        {
+            if(JudgeCount(Text: String(ch)))
+            {
+                CouData.PushCou(inCou: String(ch))
+                if(!Number.isEmpty)
+                {
+                    NumData.PushNum(inNum: Double(Number)!)
+                    Number = ""
+                }
+            }
+            else
+            {
+                Number += String(ch)
+            }
+        }
+        if(!Number.isEmpty)
+        {
+            NumData.PushNum(inNum: Double(Number)!)
+            Number = ""
+        }
     }
     func JudgeCount(Text:String) -> Bool
     {
@@ -120,7 +145,7 @@ class ViewController: UIViewController {
             case ")":
                     Text = ">"
                 break
-            case "=":
+            /*case "=":
                 switch Text1
                 {
                 case "=":
@@ -129,7 +154,7 @@ class ViewController: UIViewController {
                 default:
                     Text = ">"
                 }
-                break
+                break*/
             default:
                 break
             }
@@ -167,7 +192,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ScendScreen: UILabel!
     @IBAction func NumberButton(_ sender: UIButton)
     {
-        var sign : String = ""
+       /* var sign : String = ""
         var Num1 : Double = 0
         var Num2 : Double = 0
         var result : Double = 0
@@ -197,7 +222,7 @@ class ViewController: UIViewController {
                 print("Number Button Error")
                 break
             }
-        }
+        }*/
         if(MainScreen.text!.count <= 14*3)
         {
         MainScreentext += sender.currentTitle!
@@ -209,20 +234,27 @@ class ViewController: UIViewController {
     {
         if(MainScreen.text!.count <= 14*3)
         {
-            if(JudgeCount( Text: (String(MainScreen.text!.suffix(1)))))
+            /*if(JudgeCount( Text: (String(MainScreen.text!.suffix(1)))))
             {
                 MainScreentext.remove(at: MainScreentext.index(before: MainScreentext.endIndex))
             }
             else
             {
-                NumData.PushNum(inNum: Double(Numbertext)!)
+                if(Numbertext != "")
+                {
+                    NumData.PushNum(inNum: Double(Numbertext)!)
+                }
                 Numbertext = ""
-            }
+            }*/
             MainScreentext += sender.currentTitle!
             MainScreen.text = MainScreentext
         }
     }
     @IBAction func KuoHaoButton(_ sender: Any) {
+       /* var sign : String = ""
+        var Num1 : Double = 0
+        var Num2 : Double = 0
+        var result : Double = 0*/
         if(MainScreen.text!.count <= 14*3)
         {
             if(String(MainScreen.text!.suffix(1)) == ".")
@@ -238,7 +270,6 @@ class ViewController: UIViewController {
             }
             else
             {
-                print(KuohaoNumber)
                 switch String(MainScreen.text!.suffix(1)) {
                     case "(":
                         MainScreentext += "("
@@ -264,16 +295,28 @@ class ViewController: UIViewController {
                         if(KuohaoNumber == 0)
                         {
                             MainScreentext += "x("
-                            CouData.PushCou(inCou: "x")
-                            NumData.PushNum(inNum:Double(Numbertext)!)
-                            Numbertext = ""
+                           /* CouData.PushCou(inCou: "x")
+                            if(Numbertext != "")
+                            {
+                                NumData.PushNum(inNum: Double(Numbertext)!)
+                            }
+                            Numbertext = ""*/
                             KuohaoNumber += 1
                         }
                         else
                         {
                             MainScreentext += ")"
-                            NumData.PushNum(inNum:Double(Numbertext)!)
-                            Numbertext = ""
+                           /* if(Numbertext != "")
+                            {
+                                NumData.PushNum(inNum: Double(Numbertext)!)
+                            }
+                            sign = CouData.PopCou()
+                            Num2 = NumData.PopNum()
+                            Num1 = NumData.PopNum()
+                            result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
+                            NumData.PushNum(inNum: result);
+                            CouData.PopCou()
+                            Numbertext = ""*/
                             KuohaoNumber -= 1
                     }
                 }
@@ -290,24 +333,22 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func Change(_ sender: Any) {
-        for item in CouData.Cou {
-            print(item)
-            if(item == CouData.Cou[CouData.Top])
-            {
-            print("A")
-            }
-        }
-        print("_______________________")
-        for item in NumData.Num {
-            print(item)
-            if(item == NumData.Num[NumData.Top])
-            {
-                print("A")
-            }
-        }
+        CutScreen(Text: MainScreen.text!)
+        
     }
     @IBAction func DeleteNumber(_ sender: Any) {
-        print(CampCount(Text1: CouData.Cou[CouData.Top], Text2:String(MainScreen.text!.suffix(1))))
+        if(MainScreen.text!.count == 1) //如果回格最后一个数字 重置为0
+        {
+            MainScreen.text = "0"
+            MainScreentext = ""
+        }
+        if(MainScreen.text! != "0"){ //若值为0 无法回格
+            if(JudgeCount(Text: String(MainScreen.text!.suffix(1))))
+            {
+                MainScreen.text!.remove(at: MainScreen.text!.index(before: MainScreen.text!.endIndex)) //删除最后一位
+                MainScreentext = MainScreen.text!
+            }
+        }
     }
     @IBAction func ACButton(_ sender: Any) {
         KuohaoNumber = 0
@@ -329,6 +370,21 @@ class ViewController: UIViewController {
         {
             NumData.PushNum(inNum: Double(Numbertext)!)
         }
+        if(KuohaoNumber != 0)
+        {
+            while (KuohaoNumber != 0 )
+            {
+                sign = CouData.PopCou()
+                Num2 = NumData.PopNum()
+                Num1 = NumData.PopNum()
+                result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
+                NumData.PushNum(inNum: result)
+                CouData.PopCou()
+                MainScreentext += ")"
+                MainScreen.text = MainScreentext
+                KuohaoNumber -= 1
+            }
+        }
         while(NumData.Top>0)
         {
             sign = CouData.PopCou()
@@ -344,5 +400,5 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 }
-// 实现括号问题 ） 入站出站问题？？？？
+// 大改 ： 实现拆分屏幕 ！！！
 
