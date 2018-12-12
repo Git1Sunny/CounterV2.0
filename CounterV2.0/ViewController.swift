@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         return false
     }
     //—————————————————————————————————————————————————————————   拆分屏幕中的内容并计算
-    func ScreenCount(Text:String)
+    func ScreenCount(Text:String) -> Bool
     {
         var sign : String = ""
         var Num1 : Double = 0
@@ -91,6 +91,10 @@ class ViewController: UIViewController {
         {
             if(JudgeCountAll(Text: String(ch)) && (Temp != "(" || String(ch) != "-"))
             { // 如果是符号 将储存的数字入栈 然后通过CampCount函数 计算
+                if(CouData.Cou[CouData.Top] == "÷" && Number == "0")
+                {
+                    return false
+                }
                 if(!Number.isEmpty)
                 {
                     NumData.PushNum(inNum: Double(Number)!)
@@ -129,11 +133,16 @@ class ViewController: UIViewController {
             }
             Temp = String (ch) // 暂存上一次的字符 用于判断- 是符号还是减号
         }
+        if(CouData.Cou[CouData.Top] == "÷" && Number == "0")
+        {
+            return false
+        }
         if(!Number.isEmpty) //遍历完若数字没入栈则入栈
         {
             NumData.PushNum(inNum: Double(Number)!)
             Number = ""
         }
+        return true
     }
     //——————————————————————————————————————————————————————   判断是否为基本符号加减乘除
     func JudgeCount(Text:String) -> Bool
@@ -217,7 +226,11 @@ class ViewController: UIViewController {
             Result = Num1 * Num2
             break
         case "÷":
-                Result = Num1 / Num2
+                if(Num2 != 0)
+                {
+                    Result = Num1 / Num2
+                }
+            
         default:
             break
         }
@@ -236,11 +249,8 @@ class ViewController: UIViewController {
                 MainScreentext += "x"
                 MainScreen.text = MainScreentext
             }
-            if(sender.currentTitle! != "0" || String(MainScreen.text!.suffix(1)) != "÷") // 若 按下除号后按下0 无效
-            {
                 MainScreentext += sender.currentTitle!
                 MainScreen.text = MainScreentext
-            }
         }
     }
     //—————————————————————————————————————————————————————————   符号按钮
@@ -248,16 +258,9 @@ class ViewController: UIViewController {
     {
         if(MainScreen.text!.count <= 26) //限制输入
         {
-            if(String(MainScreen.text!.suffix(1)) == "0" || String(MainScreen.text!.suffix(1)) == "(")
-            { // 若输入符号前 屏幕内容为0 或者 （ 则添加0或1
-                switch sender.currentTitle
-                {
-                    case "+" : MainScreentext += "0"; break;
-                    case "-" : MainScreentext += "0"; break;
-                    case "x" : MainScreentext += "1"; break;
-                    case "÷" : MainScreentext += "1"; break;
-                    default : break;
-                }
+            if(MainScreen.text! == "0" || String(MainScreen.text!.suffix(1)) == "(")
+            { // 若输入符号前 屏幕内容为0
+                MainScreentext += "0";
             }
             if(JudgeCount( Text: (String(MainScreen.text!.suffix(1)))) || String(MainScreen.text!.suffix(1)) == ".")
                 //在输入符号时 末尾为符号 则修改符号为 新符号
@@ -422,6 +425,8 @@ class ViewController: UIViewController {
         var Num2 : Double = 0
         var kuoNumber : Int = 0
         var result : Double = 0
+        NumData.reNumberData()
+        CouData.reCountData()
         while(JudgeCountAll(Text: (String(MainScreen.text!.suffix(1)))) || String(MainScreen.text!.suffix(1)) == ".")
         {
             MainScreentext.remove(at:  MainScreentext.index(before:MainScreentext.endIndex))
@@ -444,16 +449,22 @@ class ViewController: UIViewController {
             MainScreen.text = MainScreentext
             kuoNumber -= 1
         }
-        ScreenCount(Text: MainScreen.text!)
-        while(CouData.Top != 0)
+        if(ScreenCount(Text: MainScreen.text!))
         {
-            sign = CouData.PopCou()
-            Num2 = NumData.PopNum()
-            Num1 = NumData.PopNum()
-            result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
-            NumData.PushNum(inNum: result);
+            while(CouData.Top != 0)
+            {
+                sign = CouData.PopCou()
+                Num2 = NumData.PopNum()
+                Num1 = NumData.PopNum()
+                result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
+                NumData.PushNum(inNum: result);
+            }
+            ScendScreen.text = RemoveZero(testNumber: NumData.Num[NumData.Top])
         }
-        ScendScreen.text = RemoveZero(testNumber: NumData.Num[NumData.Top])
+        else
+        {
+            ScendScreen.text = ""
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
