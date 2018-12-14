@@ -470,4 +470,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-}
+}//分别为横屏竖屏添加约束//
