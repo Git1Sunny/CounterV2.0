@@ -91,11 +91,11 @@ class ViewController: UIViewController {
         {
             if(JudgeCountAll(Text: String(ch)) && (Temp != "(" || String(ch) != "-"))
             { // 如果是符号 将储存的数字入栈 然后通过CampCount函数 计算
-                if(CouData.Cou[CouData.Top] == "÷" && Number == "0")
+                if(CouData.Cou[CouData.Top] == "÷" && Number == "0") // 如果除号后为零则不执行操作
                 {
                     return false
                 }
-                if(!Number.isEmpty)
+                if(!Number.isEmpty) //如果数字队列不为空 则让数字入栈
                 {
                     NumData.PushNum(inNum: Double(Number)!)
                     Number = ""
@@ -332,13 +332,13 @@ class ViewController: UIViewController {
                 PointNumber -= 1
             }
         } // 计算当前小数点数量
-        if(String(MainScreen.text!.suffix(1)) == ")")
+        if(String(MainScreen.text!.suffix(1)) == ")") //如果按小数点是前一个为）则删除右括号
         {
             MainScreen.text!.remove(at: MainScreen.text!.index(before: MainScreen.text!.endIndex))
             KuohaoNumber -= 1
             MainScreentext = MainScreen.text!
         }
-        if(JudgeCount(Text: (String(MainScreen.text!.suffix(1)))))
+        if(JudgeCount(Text: (String(MainScreen.text!.suffix(1))))) //如果直接输入小数点 则输入0再点小数点
         {
             MainScreentext += "0"
             MainScreen.text = MainScreentext
@@ -470,4 +470,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-}//分别为横屏竖屏添加约束//
+}
