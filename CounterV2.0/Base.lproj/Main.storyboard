@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="landscape">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CounterV2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1i-iV-q6S">
-                                <rect key="frame" x="645" y="302" width="66" height="66"/>
+                                <rect key="frame" x="303" y="718" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="43w-7e-Lt0"/>
                                     <constraint firstAttribute="width" constant="88" id="ADd-ZV-ZM5"/>
@@ -26,8 +26,8 @@
                                     <constraint firstAttribute="height" constant="88" id="phM-20-nVI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="=" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="=" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="851-EQ-SMn">
-                                <rect key="frame" x="249" y="236" width="66" height="66"/>
+                                <rect key="frame" x="209" y="522" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="FCG-2d-xCg"/>
                                     <constraint firstAttribute="width" constant="88" id="aO0-r0-fM8"/>
@@ -62,8 +62,8 @@
                                     <constraint firstAttribute="height" constant="66" id="pya-c2-MQS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="6" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="6" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2z-K3-goP">
-                                <rect key="frame" x="320" y="236" width="66" height="66"/>
+                                <rect key="frame" x="23" y="424" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="DcM-2U-mLb"/>
                                     <constraint firstAttribute="height" constant="66" id="XgW-uj-GF8"/>
@@ -98,8 +98,8 @@
                                     <constraint firstAttribute="width" constant="88" id="emJ-hx-fvi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="7" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="7" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -125,44 +125,8 @@
                                     <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKY-xg-FMV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-Tk-4ka">
-                                <rect key="frame" x="574" y="302" width="66" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="GuL-ab-HRS"/>
-                                    <constraint firstAttribute="width" constant="66" id="O8h-tl-zRh"/>
-                                    <constraint firstAttribute="height" constant="66" id="l2k-J9-z3J"/>
-                                    <constraint firstAttribute="width" constant="88" id="wmR-lN-GXJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="." backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="GuL-ab-HRS"/>
-                                        <exclude reference="O8h-tl-zRh"/>
-                                        <exclude reference="l2k-J9-z3J"/>
-                                        <exclude reference="wmR-lN-GXJ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="O8h-tl-zRh"/>
-                                        <include reference="l2k-J9-z3J"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="GuL-ab-HRS"/>
-                                        <include reference="wmR-lN-GXJ"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="PointButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14g-gk-zCD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPl-Bc-XFX">
-                                <rect key="frame" x="427" y="170" width="66" height="66"/>
+                                <rect key="frame" x="23" y="522" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="4by-4L-rTR"/>
                                     <constraint firstAttribute="height" constant="88" id="8Tk-xQ-ib7"/>
@@ -170,8 +134,8 @@
                                     <constraint firstAttribute="width" constant="66" id="XRz-FZ-wxQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="4" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="4" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -197,44 +161,8 @@
                                     <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTy-OZ-cpR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-Tv-sfh" userLabel="number">
-                                <rect key="frame" x="214" y="170" width="66" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="53d-ja-WQZ"/>
-                                    <constraint firstAttribute="width" constant="66" id="BuK-t6-1rg"/>
-                                    <constraint firstAttribute="height" constant="66" id="SwU-Jw-W8G"/>
-                                    <constraint firstAttribute="height" constant="88" id="WKq-UL-Bvb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="1" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="53d-ja-WQZ"/>
-                                        <exclude reference="BuK-t6-1rg"/>
-                                        <exclude reference="SwU-Jw-W8G"/>
-                                        <exclude reference="WKq-UL-Bvb"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="BuK-t6-1rg"/>
-                                        <include reference="SwU-Jw-W8G"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="53d-ja-WQZ"/>
-                                        <include reference="WKq-UL-Bvb"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pfr-E2-6op"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-dr-Mn1">
-                                <rect key="frame" x="427" y="302" width="66" height="66"/>
+                                <rect key="frame" x="303" y="424" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="AIe-Y5-3Lw"/>
                                     <constraint firstAttribute="width" constant="66" id="DSg-vI-qpC"/>
@@ -242,8 +170,8 @@
                                     <constraint firstAttribute="height" constant="66" id="pdX-P8-D7p"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="x" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="x" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -270,7 +198,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQp-Hq-gCH">
-                                <rect key="frame" x="285" y="302" width="66" height="66"/>
+                                <rect key="frame" x="303" y="620" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="8K8-pt-Hyv"/>
                                     <constraint firstAttribute="height" constant="88" id="Aed-Zd-tnb"/>
@@ -278,8 +206,8 @@
                                     <constraint firstAttribute="width" constant="88" id="hoD-XU-7VN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="+" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="+" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -306,7 +234,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGG-JB-BZr">
-                                <rect key="frame" x="356" y="302" width="66" height="66"/>
+                                <rect key="frame" x="303" y="522" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="0Dw-rH-ubs"/>
                                     <constraint firstAttribute="width" constant="88" id="Pzg-5V-FNs"/>
@@ -314,8 +242,8 @@
                                     <constraint firstAttribute="width" constant="66" id="u26-iD-Sp0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="-" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="-" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -341,80 +269,8 @@
                                     <action selector="CountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqQ-Qu-SVh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5e-ie-ANU">
-                                <rect key="frame" x="356" y="170" width="66" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="VtE-lS-4It"/>
-                                    <constraint firstAttribute="height" constant="88" id="qfL-qf-Gl7"/>
-                                    <constraint firstAttribute="width" constant="66" id="vgk-AY-ep8"/>
-                                    <constraint firstAttribute="width" constant="88" id="xgK-Ln-ce8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="3" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="VtE-lS-4It"/>
-                                        <exclude reference="qfL-qf-Gl7"/>
-                                        <exclude reference="vgk-AY-ep8"/>
-                                        <exclude reference="xgK-Ln-ce8"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="VtE-lS-4It"/>
-                                        <include reference="vgk-AY-ep8"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="qfL-qf-Gl7"/>
-                                        <include reference="xgK-Ln-ce8"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eY-UZ-3GS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWb-a3-OfF">
-                                <rect key="frame" x="533" y="236" width="66" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="DrW-Di-daX"/>
-                                    <constraint firstAttribute="width" constant="88" id="JzH-PY-GPT"/>
-                                    <constraint firstAttribute="height" constant="88" id="RXo-hV-kJ6"/>
-                                    <constraint firstAttribute="width" constant="66" id="vO4-m3-0u2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="0" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="DrW-Di-daX"/>
-                                        <exclude reference="JzH-PY-GPT"/>
-                                        <exclude reference="RXo-hV-kJ6"/>
-                                        <exclude reference="vO4-m3-0u2"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="DrW-Di-daX"/>
-                                        <include reference="vO4-m3-0u2"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="JzH-PY-GPT"/>
-                                        <include reference="RXo-hV-kJ6"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qge-cj-vVo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZT-O3-p5K">
-                                <rect key="frame" x="498" y="170" width="66" height="66"/>
+                                <rect key="frame" x="116" y="522" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="ctd-Yn-H7W"/>
                                     <constraint firstAttribute="height" constant="66" id="hb6-Ql-k8W"/>
@@ -422,8 +278,8 @@
                                     <constraint firstAttribute="width" constant="66" id="ydd-3e-yXi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="5" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="5" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -450,7 +306,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teP-sO-1vw">
-                                <rect key="frame" x="391" y="236" width="66" height="66"/>
+                                <rect key="frame" x="116" y="424" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="EEO-5C-d89"/>
                                     <constraint firstAttribute="width" constant="66" id="S0N-XD-AKx"/>
@@ -458,8 +314,8 @@
                                     <constraint firstAttribute="width" constant="88" id="wwo-US-Q6J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="8" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="8" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -486,7 +342,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMi-Ba-O95">
-                                <rect key="frame" x="285" y="170" width="66" height="66"/>
+                                <rect key="frame" x="116" y="620" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="KOA-wl-zpQ"/>
                                     <constraint firstAttribute="height" constant="66" id="Wqs-Gr-Ezp"/>
@@ -494,8 +350,8 @@
                                     <constraint firstAttribute="width" constant="88" id="daH-0D-XoS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="2" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -522,7 +378,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGb-WB-kHq">
-                                <rect key="frame" x="462" y="236" width="66" height="66"/>
+                                <rect key="frame" x="209" y="424" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="Fns-TK-4gK"/>
                                     <constraint firstAttribute="height" constant="88" id="KJA-sB-oYF"/>
@@ -530,8 +386,8 @@
                                     <constraint firstAttribute="width" constant="88" id="ZNJ-Au-Qgq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="9" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="9" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -558,7 +414,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzW-6M-nOc">
-                                <rect key="frame" x="114" y="110" width="698" height="50"/>
+                                <rect key="frame" x="30" y="252" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2Uc-HS-cU5"/>
                                     <constraint firstAttribute="height" constant="50" id="lhk-WR-lfp"/>
@@ -584,7 +440,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-z9-dqC">
-                                <rect key="frame" x="50" y="10" width="772" height="150"/>
+                                <rect key="frame" x="30" y="117" width="354" height="199"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.29999999999999999" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="199" id="ICb-ep-Bbx">
@@ -593,7 +449,7 @@
                                     <constraint firstAttribute="height" constant="199" id="XC3-Kr-Vsc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="40"/>
-                                <color key="textColor" red="0.38517332077026367" green="0.80880028009414673" blue="0.82322210073471069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="-1" height="-1"/>
                                 <variation key="default">
@@ -614,7 +470,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjj-O9-V1B">
-                                <rect key="frame" x="604" y="236" width="66" height="66"/>
+                                <rect key="frame" x="23" y="326" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="3wu-VF-pwz"/>
                                     <constraint firstAttribute="height" constant="66" id="D9c-Wf-NYK"/>
@@ -622,8 +478,8 @@
                                     <constraint firstAttribute="width" constant="88" id="qml-Oh-2q7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="C" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="C" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -650,7 +506,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-IZ-EGE">
-                                <rect key="frame" x="569" y="170" width="66" height="66"/>
+                                <rect key="frame" x="209" y="326" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="J5O-Og-IA4"/>
                                     <constraint firstAttribute="width" constant="66" id="jiQ-qk-R3J"/>
@@ -658,8 +514,8 @@
                                     <constraint firstAttribute="height" constant="66" id="l7E-zG-rYQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="()" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="()" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -686,7 +542,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnA-WL-w3j">
-                                <rect key="frame" x="498" y="302" width="66" height="66"/>
+                                <rect key="frame" x="303" y="326" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="NOG-yh-Xjd"/>
                                     <constraint firstAttribute="width" constant="88" id="Qa5-8I-uja"/>
@@ -694,8 +550,8 @@
                                     <constraint firstAttribute="width" constant="66" id="vse-hc-YOJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="÷" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="÷" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -722,7 +578,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlt-YY-ecf">
-                                <rect key="frame" x="640" y="170" width="66" height="66"/>
+                                <rect key="frame" x="116" y="326" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="Cmi-X6-P00"/>
                                     <constraint firstAttribute="height" constant="66" id="jdh-lP-GG2"/>
@@ -730,8 +586,8 @@
                                     <constraint firstAttribute="width" constant="66" id="oyd-cC-RMv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
-                                <state key="normal" title="←" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="←" backgroundImage="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -757,8 +613,152 @@
                                     <action selector="DeleteNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HW3-kO-FVI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJS-Tk-4ka">
+                                <rect key="frame" x="209" y="718" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="GuL-ab-HRS"/>
+                                    <constraint firstAttribute="width" constant="66" id="O8h-tl-zRh"/>
+                                    <constraint firstAttribute="height" constant="66" id="l2k-J9-z3J"/>
+                                    <constraint firstAttribute="width" constant="88" id="wmR-lN-GXJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
+                                <state key="normal" title="." backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GuL-ab-HRS"/>
+                                        <exclude reference="O8h-tl-zRh"/>
+                                        <exclude reference="l2k-J9-z3J"/>
+                                        <exclude reference="wmR-lN-GXJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="O8h-tl-zRh"/>
+                                        <include reference="l2k-J9-z3J"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="GuL-ab-HRS"/>
+                                        <include reference="wmR-lN-GXJ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="PointButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14g-gk-zCD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-Tv-sfh" userLabel="number">
+                                <rect key="frame" x="23" y="620" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="53d-ja-WQZ"/>
+                                    <constraint firstAttribute="width" constant="66" id="BuK-t6-1rg"/>
+                                    <constraint firstAttribute="height" constant="66" id="SwU-Jw-W8G"/>
+                                    <constraint firstAttribute="height" constant="88" id="WKq-UL-Bvb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
+                                <state key="normal" title="1" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="53d-ja-WQZ"/>
+                                        <exclude reference="BuK-t6-1rg"/>
+                                        <exclude reference="SwU-Jw-W8G"/>
+                                        <exclude reference="WKq-UL-Bvb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="BuK-t6-1rg"/>
+                                        <include reference="SwU-Jw-W8G"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="53d-ja-WQZ"/>
+                                        <include reference="WKq-UL-Bvb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pfr-E2-6op"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5e-ie-ANU">
+                                <rect key="frame" x="209" y="620" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="VtE-lS-4It"/>
+                                    <constraint firstAttribute="height" constant="88" id="qfL-qf-Gl7"/>
+                                    <constraint firstAttribute="width" constant="66" id="vgk-AY-ep8"/>
+                                    <constraint firstAttribute="width" constant="88" id="xgK-Ln-ce8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
+                                <state key="normal" title="3" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VtE-lS-4It"/>
+                                        <exclude reference="qfL-qf-Gl7"/>
+                                        <exclude reference="vgk-AY-ep8"/>
+                                        <exclude reference="xgK-Ln-ce8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="VtE-lS-4It"/>
+                                        <include reference="vgk-AY-ep8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="qfL-qf-Gl7"/>
+                                        <include reference="xgK-Ln-ce8"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eY-UZ-3GS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWb-a3-OfF">
+                                <rect key="frame" x="116" y="718" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="DrW-Di-daX"/>
+                                    <constraint firstAttribute="width" constant="88" id="JzH-PY-GPT"/>
+                                    <constraint firstAttribute="height" constant="88" id="RXo-hV-kJ6"/>
+                                    <constraint firstAttribute="width" constant="66" id="vO4-m3-0u2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="38"/>
+                                <state key="normal" title="0" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DrW-Di-daX"/>
+                                        <exclude reference="JzH-PY-GPT"/>
+                                        <exclude reference="RXo-hV-kJ6"/>
+                                        <exclude reference="vO4-m3-0u2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="DrW-Di-daX"/>
+                                        <include reference="vO4-m3-0u2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JzH-PY-GPT"/>
+                                        <include reference="RXo-hV-kJ6"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="NumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qge-cj-vVo"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAW-h4-pwU">
-                                <rect key="frame" x="214" y="302" width="66" height="66"/>
+                                <rect key="frame" x="23" y="718" width="88" height="88"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="5ht-ux-h5T"/>
                                     <constraint firstAttribute="height" constant="66" id="Rxv-qg-UkF"/>
@@ -766,8 +766,8 @@
                                     <constraint firstAttribute="width" constant="88" id="sgE-pM-4jY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="36"/>
-                                <state key="normal" title="+/-" backgroundImage="ButtonBkGround">
-                                    <color key="titleColor" red="0.99087138779999995" green="1" blue="0.98065085259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="+/-" backgroundImage="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -794,7 +794,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WFs-dr-Mn1" firstAttribute="leading" secondItem="KGG-JB-BZr" secondAttribute="trailing" constant="5" id="08K-Pb-eOy">
                                 <variation key="heightClass=compact-widthClass=regular" constant="5"/>
@@ -1009,6 +1009,10 @@
                                 <exclude reference="mcr-JC-HJu"/>
                                 <exclude reference="vHL-Vr-Rj8"/>
                                 <exclude reference="vbu-zn-Ul3"/>
+                                <exclude reference="1x7-u1-J4s"/>
+                                <exclude reference="W3X-jU-Nfb"/>
+                                <exclude reference="d3g-I4-H1n"/>
+                                <exclude reference="yD6-HM-Mfd"/>
                                 <exclude reference="6ek-tf-AGx"/>
                                 <exclude reference="B8b-Sb-pmB"/>
                                 <exclude reference="ZRL-Y2-tu2"/>
@@ -1020,10 +1024,10 @@
                                 <exclude reference="3Fy-US-ZgF"/>
                                 <exclude reference="Gi9-Ue-Qsa"/>
                                 <exclude reference="cR8-op-J3Y"/>
-                                <exclude reference="1x7-u1-J4s"/>
-                                <exclude reference="W3X-jU-Nfb"/>
-                                <exclude reference="d3g-I4-H1n"/>
-                                <exclude reference="yD6-HM-Mfd"/>
+                                <exclude reference="3Rh-TG-V1f"/>
+                                <exclude reference="T4T-12-FvJ"/>
+                                <exclude reference="u3c-aH-d9Y"/>
+                                <exclude reference="vHE-39-oKp"/>
                                 <exclude reference="G2h-QB-gZi"/>
                                 <exclude reference="VFF-Wg-1wN"/>
                                 <exclude reference="w2c-Ph-9hP"/>
@@ -1031,10 +1035,10 @@
                                 <exclude reference="0k7-ug-VJU"/>
                                 <exclude reference="eKu-ai-76F"/>
                                 <exclude reference="ufR-SG-rmx"/>
-                                <exclude reference="3Rh-TG-V1f"/>
-                                <exclude reference="T4T-12-FvJ"/>
-                                <exclude reference="u3c-aH-d9Y"/>
-                                <exclude reference="vHE-39-oKp"/>
+                                <exclude reference="E5j-LI-e57"/>
+                                <exclude reference="G7c-H8-LHC"/>
+                                <exclude reference="Ues-G9-ALQ"/>
+                                <exclude reference="WH8-xt-1Gg"/>
                                 <exclude reference="08K-Pb-eOy"/>
                                 <exclude reference="JeT-dA-jZT"/>
                                 <exclude reference="gT5-FZ-tJ9"/>
@@ -1042,10 +1046,6 @@
                                 <exclude reference="Omq-Kh-1e9"/>
                                 <exclude reference="bSE-TL-0cO"/>
                                 <exclude reference="bzc-wW-v0f"/>
-                                <exclude reference="E5j-LI-e57"/>
-                                <exclude reference="G7c-H8-LHC"/>
-                                <exclude reference="Ues-G9-ALQ"/>
-                                <exclude reference="WH8-xt-1Gg"/>
                                 <exclude reference="L2e-Au-wOW"/>
                                 <exclude reference="ejr-wS-gOk"/>
                                 <exclude reference="q3v-SR-Vgl"/>
@@ -1057,14 +1057,14 @@
                                 <exclude reference="XVy-rm-qUP"/>
                                 <exclude reference="irN-Ta-Jb6"/>
                                 <exclude reference="rS0-3Q-p83"/>
-                                <exclude reference="Mpi-ac-EHE"/>
-                                <exclude reference="TWw-69-Gav"/>
-                                <exclude reference="aCO-ey-oQN"/>
-                                <exclude reference="q3R-x9-wHi"/>
                                 <exclude reference="HwQ-zE-Tq3"/>
                                 <exclude reference="YDb-T2-Tlv"/>
                                 <exclude reference="e4N-YA-RRv"/>
                                 <exclude reference="eEk-i7-sdj"/>
+                                <exclude reference="Mpi-ac-EHE"/>
+                                <exclude reference="TWw-69-Gav"/>
+                                <exclude reference="aCO-ey-oQN"/>
+                                <exclude reference="q3R-x9-wHi"/>
                                 <exclude reference="CNo-xm-gyO"/>
                                 <exclude reference="cxJ-Mm-Zqb"/>
                                 <exclude reference="gGv-T9-dqF"/>
@@ -1088,36 +1088,36 @@
                                 <include reference="s1V-S4-XnY"/>
                                 <include reference="3rY-qY-cxd"/>
                                 <include reference="vHL-Vr-Rj8"/>
+                                <include reference="1x7-u1-J4s"/>
+                                <include reference="yD6-HM-Mfd"/>
                                 <include reference="6ek-tf-AGx"/>
                                 <include reference="aje-1m-ufc"/>
                                 <include reference="1n8-bc-R2a"/>
                                 <include reference="Sli-Jr-hLx"/>
                                 <include reference="Gi9-Ue-Qsa"/>
                                 <include reference="cR8-op-J3Y"/>
-                                <include reference="1x7-u1-J4s"/>
-                                <include reference="yD6-HM-Mfd"/>
+                                <include reference="T4T-12-FvJ"/>
+                                <include reference="u3c-aH-d9Y"/>
                                 <include reference="VFF-Wg-1wN"/>
                                 <include reference="z0l-I7-MC0"/>
                                 <include reference="eKu-ai-76F"/>
                                 <include reference="ufR-SG-rmx"/>
-                                <include reference="T4T-12-FvJ"/>
-                                <include reference="u3c-aH-d9Y"/>
+                                <include reference="E5j-LI-e57"/>
+                                <include reference="Ues-G9-ALQ"/>
                                 <include reference="08K-Pb-eOy"/>
                                 <include reference="JeT-dA-jZT"/>
                                 <include reference="bSE-TL-0cO"/>
                                 <include reference="bzc-wW-v0f"/>
-                                <include reference="E5j-LI-e57"/>
-                                <include reference="Ues-G9-ALQ"/>
                                 <include reference="L2e-Au-wOW"/>
                                 <include reference="ejr-wS-gOk"/>
                                 <include reference="f9H-Ul-cQz"/>
                                 <include reference="hIW-sJ-i7D"/>
                                 <include reference="XVy-rm-qUP"/>
                                 <include reference="irN-Ta-Jb6"/>
-                                <include reference="TWw-69-Gav"/>
-                                <include reference="aCO-ey-oQN"/>
                                 <include reference="YDb-T2-Tlv"/>
                                 <include reference="e4N-YA-RRv"/>
+                                <include reference="TWw-69-Gav"/>
+                                <include reference="aCO-ey-oQN"/>
                                 <include reference="CNo-xm-gyO"/>
                                 <include reference="cxJ-Mm-Zqb"/>
                                 <include reference="PyV-bl-Ahb"/>
@@ -1144,32 +1144,32 @@
                                 <include reference="sbc-cY-hzc"/>
                                 <include reference="mcr-JC-HJu"/>
                                 <include reference="vbu-zn-Ul3"/>
+                                <include reference="W3X-jU-Nfb"/>
+                                <include reference="d3g-I4-H1n"/>
                                 <include reference="B8b-Sb-pmB"/>
                                 <include reference="ZRL-Y2-tu2"/>
                                 <include reference="6CZ-cR-NG0"/>
                                 <include reference="Zyd-sp-8g2"/>
                                 <include reference="3Fy-US-ZgF"/>
-                                <include reference="W3X-jU-Nfb"/>
-                                <include reference="d3g-I4-H1n"/>
+                                <include reference="3Rh-TG-V1f"/>
+                                <include reference="vHE-39-oKp"/>
                                 <include reference="G2h-QB-gZi"/>
                                 <include reference="w2c-Ph-9hP"/>
                                 <include reference="0k7-ug-VJU"/>
-                                <include reference="3Rh-TG-V1f"/>
-                                <include reference="vHE-39-oKp"/>
+                                <include reference="G7c-H8-LHC"/>
+                                <include reference="WH8-xt-1Gg"/>
                                 <include reference="gT5-FZ-tJ9"/>
                                 <include reference="M8J-FB-65f"/>
                                 <include reference="Omq-Kh-1e9"/>
-                                <include reference="G7c-H8-LHC"/>
-                                <include reference="WH8-xt-1Gg"/>
                                 <include reference="q3v-SR-Vgl"/>
                                 <include reference="RY8-3C-Sr2"/>
                                 <include reference="xUR-3L-T0h"/>
                                 <include reference="8aO-f7-32S"/>
                                 <include reference="rS0-3Q-p83"/>
-                                <include reference="Mpi-ac-EHE"/>
-                                <include reference="q3R-x9-wHi"/>
                                 <include reference="HwQ-zE-Tq3"/>
                                 <include reference="eEk-i7-sdj"/>
+                                <include reference="Mpi-ac-EHE"/>
+                                <include reference="q3R-x9-wHi"/>
                                 <include reference="gGv-T9-dqF"/>
                                 <include reference="mfE-FM-jfF"/>
                                 <include reference="LXg-xL-hZd"/>
@@ -1187,6 +1187,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ButtonBkGround" width="406" height="406"/>
+        <image name="2" width="1181" height="1181"/>
+        <image name="4" width="1181" height="1181"/>
     </resources>
 </document>

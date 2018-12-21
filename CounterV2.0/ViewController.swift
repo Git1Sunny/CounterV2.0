@@ -354,41 +354,44 @@ class ViewController: UIViewController {
     @IBAction func Change(_ sender: Any) {
         var Number : String = ""
         var count : String = ""
-        if(MainScreen.text == "0")
+        if(MainScreen.text == "0") // 若屏幕中只有0 则屏幕中显示（-
         {
             MainScreentext += "(-"
             KuohaoNumber += 1
             MainScreen.text = MainScreentext
         }
-        else if(JudgeCount(Text: (String(MainScreen.text!.suffix(1)))) || String(MainScreen.text!.suffix(1)) == "(" ) // 判断前一个符号时否是符号或者“（”
+        else if(JudgeCount(Text: (String(MainScreen.text!.suffix(1)))) || String(MainScreen.text!.suffix(1)) == "(" ) // 判断前一个符号时否是符号或者“（”是则直接显示（-
         {
             MainScreentext += "(-"
             KuohaoNumber += 1
             MainScreen.text = MainScreentext
         }
-        else if(String(MainScreen.text!.suffix(1)) == ")") //判断前一个是否为“）”
+        else if(String(MainScreen.text!.suffix(1)) == ")") //判断前一个是否为“）” 若是则打印x（-
         {
             MainScreentext += "x(-"
             KuohaoNumber += 1
         }
         else
         {
-            for i in MainScreen.text!.characters.reversed()
+            for i in MainScreen.text!.characters.reversed() //遍历屏幕内容 取最后一串数字
             {
                 if(String(i) == "-" || !JudgeCountAll(Text: String(i)))
                 {
                     count += String(i)
                     MainScreen.text!.remove(at: MainScreen.text!.index(before: MainScreen.text!.endIndex))
                 }
+                else
+                {
+                    break
+                }
             }
-        
-            for i in count.characters.reversed()
+            for i in count.characters.reversed() // 将上方便利结果 整合成完整数字
             {
                     Number += String(i)
             }
-            Number = RemoveZero(testNumber: (Double(Number)! * -1))
-            MainScreentext = MainScreen.text!
-            if(String(MainScreen.text!.suffix(1)) != "(" || String(MainScreen.text!.suffix(2)) != "(")
+            Number = RemoveZero(testNumber: (Double(Number)! * -1)) //让数字乘-1
+            MainScreentext = MainScreen.text! // 将处理后到数字打印回屏幕上
+            if(String(MainScreen.text!.suffix(1)) != "(" || String(MainScreen.text!.suffix(2)) != "(")//如果前一个字符或者前两个字符不为（ 则多显示一个（
             {
                 MainScreentext += "("
             }
@@ -410,7 +413,7 @@ class ViewController: UIViewController {
         }
     }
     //—————————————————————————————————————————————————————————   AC清空按钮
-    @IBAction func ACButton(_ sender: Any) {
+    @IBAction func ACButton(_ sender: Any) {//初始化所有内容
         KuohaoNumber = 0
         MainScreentext = ""
         MainScreen.text = "0"
@@ -425,14 +428,12 @@ class ViewController: UIViewController {
         var Num2 : Double = 0
         var kuoNumber : Int = 0
         var result : Double = 0
-        NumData.reNumberData()
-        CouData.reCountData()
-        while(JudgeCountAll(Text: (String(MainScreen.text!.suffix(1)))) || String(MainScreen.text!.suffix(1)) == ".")
+        while(JudgeCountAll(Text: (String(MainScreen.text!.suffix(1)))) || String(MainScreen.text!.suffix(1)) == ".") //若最后一个为符号或者小数点则删除尾位
         {
             MainScreentext.remove(at:  MainScreentext.index(before:MainScreentext.endIndex))
             MainScreen.text = MainScreentext
         }
-        for i in MainScreen.text!.characters
+        for i in MainScreen.text!.characters // 遍历判断括号数量是不是足够
         {
             if(String(i) == "(")
             {
@@ -443,15 +444,15 @@ class ViewController: UIViewController {
                 kuoNumber -= 1
             }
         }
-        while(kuoNumber > 0)
+        while(kuoNumber > 0) // 若括号对数不匹配则补全对数
         {
             MainScreentext += ")"
             MainScreen.text = MainScreentext
             kuoNumber -= 1
         }
-        if(ScreenCount(Text: MainScreen.text!))
+        if(ScreenCount(Text: MainScreen.text!)) //拆分屏幕内容 并计算入栈
         {
-            while(CouData.Top != 0)
+            while(CouData.Top != 0) // 如果拆分屏幕完成后 数字栈中仍有数据 则一直运算到数字栈为1
             {
                 sign = CouData.PopCou()
                 Num2 = NumData.PopNum()
@@ -459,12 +460,14 @@ class ViewController: UIViewController {
                 result = MainCount(Num1: Num1, Cou: sign, Num2: Num2)
                 NumData.PushNum(inNum: result);
             }
-            ScendScreen.text = RemoveZero(testNumber: NumData.Num[NumData.Top])
+            ScendScreen.text = RemoveZero(testNumber: NumData.Num[NumData.Top]) //在屏幕 中现实结果
         }
         else
         {
-            ScendScreen.text = ""
+            ScendScreen.text = "" //计算除0时候（出错时） 将结果屏幕显示为空
         }
+        NumData.reNumberData() // 计算结束 初始化两个堆栈
+        CouData.reCountData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
