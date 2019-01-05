@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             self.Cou[self.Top] = inCou
         }
     }
-    //—————————————————————————————————————————————————————————   变量定义
+    //—————————————————————————————————————————————————————————   全局变量定义
     var NumData = NumberData()                  //实例化 数字栈
     var CouData = CountData()                   // 实例化 符号栈
     var KuohaoNumber : Int = 0                  // 括号统计
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         }
         return str//正常返回
     }
-    //—————————————————————————————————————————————————————————   判断输入的字符时否为符号
+    //—————————————————————————————————————————————————————————   判断输入的字符是否为符号
     func JudgeCountAll(Text:String) -> Bool {
         if(Text == "+"||Text == "-"||Text == "x"||Text == "÷"||Text == "("||Text == ")")
         {
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
             }
             Temp = String (ch) // 暂存上一次的字符 用于判断- 是符号还是减号
         }
-        if(CouData.Cou[CouData.Top] == "÷" && Number == "0")
+        if(CouData.Cou[CouData.Top] == "÷" && Number == "0")//如果除号后是0 则返回false 不能计算
         {
             return false
         }
